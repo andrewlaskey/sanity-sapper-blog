@@ -50,17 +50,19 @@ export default {
       ]
     },
     {
-      name: 'categories',
+      name: 'category',
+      type: 'reference',
+      title: 'Category',
+      to: [{type: 'category'}]
+    },
+    {
+      name: 'tags',
       type: 'array',
-      title: 'Categories',
-      of: [
-        {
-          type: 'reference',
-          to: {
-            type: 'category'
-          }
-        }
-      ]
+      title: 'Tags',
+      of: [{type: 'string'}],
+      options: {
+        layout: 'tags'
+      }
     },
     {
       name: 'body',

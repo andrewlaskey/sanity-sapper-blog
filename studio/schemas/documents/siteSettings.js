@@ -26,6 +26,15 @@ export default {
       }
     },
     {
+      name: 'links',
+      type: 'array',
+      title: 'Links',
+      of: [{
+        type: 'reference',
+        to: [{type: 'siteLink'}]
+      }]
+    },
+    {
       name: 'author',
       type: 'reference',
       description: 'Publish an author and set a reference to them here.',
