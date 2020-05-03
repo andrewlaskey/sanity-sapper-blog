@@ -48,7 +48,20 @@
 </script>
 
 <style>
+  h3 {
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+  }
 
+  ul {
+    margin-bottom: 0.5em;
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  li {
+    padding-bottom: 0.25em;
+  }
 </style>
 
 <svelte:head>

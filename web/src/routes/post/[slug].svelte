@@ -61,7 +61,7 @@
   <title>{post.title}</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
+<h1 class="h2">{post.title}</h1>
 
 <div class="content">
   <BlockContent blocks={post.body} {serializers} />
