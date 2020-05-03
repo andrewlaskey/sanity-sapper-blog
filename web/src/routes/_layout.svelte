@@ -29,11 +29,11 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    max-width: 56em;
+    max-width: 48em;
   }
   main {
     position: relative;
-    max-width: 56em;
+    max-width: 48em;
     background-color: white;
     padding: 2em;
     margin: 0 auto;

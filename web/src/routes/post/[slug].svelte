@@ -41,6 +41,8 @@
 
   .content :global(img) {
     display: block;
+    margin: 0 auto 2rem;
+    width: auto;
     max-width: 100%;
   }
 

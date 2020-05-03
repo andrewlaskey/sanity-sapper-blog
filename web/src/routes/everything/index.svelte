@@ -13,6 +13,7 @@
 </script>
 
 <script>
+  import PostLink from "../../components/PostLink.svelte";
   export let posts;
 
   function formatDate(date) {
@@ -23,7 +24,9 @@
 <style>
   ul {
     margin: 0 0 1em 0;
+    padding-left: 0;
     line-height: 1.5;
+    list-style-type: none;
   }
 </style>
 
@@ -31,7 +34,7 @@
   <title>Everything</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
+<h1 class="h2">All Posts</h1>
 
 <ul>
   {#each posts as post}
@@ -40,8 +43,7 @@
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
     <li>
-      <a rel="prefetch" href="post/{post.slug.current}">{post.title}</a>
-      ({formatDate(post.publishedAt)})
+      <PostLink {post} />
     </li>
   {/each}
 </ul>

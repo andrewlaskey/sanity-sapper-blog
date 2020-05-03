@@ -43,6 +43,7 @@
 </script>
 
 <script>
+  import PostLink from "../components/PostLink.svelte";
   export let shares;
   export let work;
 </script>
@@ -50,7 +51,6 @@
 <style>
   h3 {
     padding-top: 0.5em;
-    padding-bottom: 1em;
   }
 
   ul {
@@ -68,7 +68,16 @@
   <title>Andrew Laskey</title>
 </svelte:head>
 
-<p>This is some text</p>
+<h1 class="h2">Andrew Laskey</h1>
+<p>
+  Hi, I've been building and coding things for the web and devices for almost a
+  decade now. Currently I'm working at
+  <a href="https://getnacelle.com/" target="_blank">Nacelle</a>
+  where we're revolutionizing e-commerce.
+  <br />
+  <br />
+  This is my little corner of the internet.
+</p>
 
 <h3>Shares</h3>
 <ul>
@@ -84,7 +93,7 @@
 <ul>
   {#each work as post}
     <li>
-      <a rel="prefetch" href="post/{post.slug.current}">{post.title}</a>
+      <PostLink {post} />
     </li>
   {/each}
 </ul>

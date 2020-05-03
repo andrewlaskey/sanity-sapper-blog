@@ -36,7 +36,12 @@
   <title>Everything</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
+<h1 class="h2">Shares</h1>
+<p>
+  Things I like, stuff I've read, and anything else. I'm not using social media
+  much these days, and I'd prefer to have more control over how I'm sharing
+  things.
+</p>
 
 <ul>
   {#each posts as post}

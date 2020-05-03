@@ -65,6 +65,11 @@ export default {
       }
     },
     {
+      name: 'externalLink',
+      type: 'url',
+      title: 'External Link'
+    },
+    {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'
@@ -105,15 +110,15 @@ export default {
       title: 'title',
       publishedAt: 'publishedAt',
       slug: 'slug',
-      media: 'mainImage'
+      media: 'mainImage',
+      category: 'category'
     },
-    prepare ({title = 'No title', publishedAt, slug, media}) {
+    prepare ({title = 'No title', publishedAt, category, media}) {
       const dateSegment = format(publishedAt, 'YYYY/MM')
-      const path = `/${dateSegment}/${slug.current}/`
       return {
         title,
         media,
-        subtitle: publishedAt ? path : 'Missing publishing date'
+        subtitle: publishedAt ? dateSegment : 'Missing publishing date'
       }
     }
   }

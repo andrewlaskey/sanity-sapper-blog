@@ -25,7 +25,6 @@ export default {
       childNodes: children,
       props: {
         url: urlFor(node)
-          .width(800)
           .auto('format')
           .url(),
         alt: node.alt,
