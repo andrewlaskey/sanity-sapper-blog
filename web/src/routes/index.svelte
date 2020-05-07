@@ -8,7 +8,10 @@
           defined(slug.current) &&
           publishedAt < now() &&
           category._ref in *[_type == "category" && title == "Sharing"]._id
-        ][0...5] | order(publishedAt desc)
+        ][0...5] | order(publishedAt desc){
+          ...,
+          'category': category->title
+        }
         `
       )
       .then(posts => {
@@ -25,7 +28,10 @@
           defined(slug.current) &&
           publishedAt < now() &&
           category._ref in *[_type=="category" && title=="Work and Projects"]._id
-        ][0...5] | order(publishedAt desc)
+        ][0...5] | order(publishedAt desc){
+          ...,
+          'category': category->title
+        }
         `
       )
       .then(posts => {
@@ -83,7 +89,7 @@
 <ul>
   {#each shares as post}
     <li>
-      <a rel="prefetch" href="post/{post.slug.current}">{post.title}</a>
+      <PostLink {post} />
     </li>
   {/each}
 </ul>

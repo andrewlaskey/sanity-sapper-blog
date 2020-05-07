@@ -2,8 +2,11 @@
   export let post;
 
   function formatDate(date) {
-    const fDate = new Date(date);
-    return `${fDate.getMonth()}/${fDate.getFullYear()}`;
+    return new Date(date).toLocaleDateString();
+  }
+
+  function urlDomain(url) {
+    return new URL(url).hostname;
   }
 </script>
 
@@ -28,7 +31,8 @@
     color: #998f96;
   }
 
-  .date {
+  .date,
+  .domain {
     margin-right: 1rem;
     font-family: "Libre Franklin", sans-serif;
   }
@@ -47,16 +51,21 @@
 <div class="post-link">
   {#if post.externalLink}
     <a href={post.externalLink} target="_blank">
-      {post.title}
+      <span>{post.title}</span>
       <svg class="icon icon-open_in_new">
         <use xlink:href="#icon-open_in_new" />
       </svg>
     </a>
   {:else}
-    <a rel="prefetch" href="post/{post.slug.current}">{post.title}</a>
+    <a rel="prefetch" href="post/{post.slug.current}">
+      <span>{post.title}</span>
+    </a>
   {/if}
   <div class="post-link-details">
     <span class="date">{formatDate(post.publishedAt)}</span>
+    {#if post.externalLink}
+      <span class="domain">{urlDomain(post.externalLink)}</span>
+    {/if}
     {#if Array.isArray(post.tags) && post.tags.length > 0}
       <div class="tags">
         {#each post.tags as tag}
