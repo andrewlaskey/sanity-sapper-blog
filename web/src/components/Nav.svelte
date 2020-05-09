@@ -65,13 +65,5 @@
       </a>
     </li>
 
-    <li>
-      <a
-        rel="prefetch"
-        class={segment === 'everything' ? 'selected' : ''}
-        href="everything">
-        everything
-      </a>
-    </li>
   </ul>
 </nav>
