@@ -79,7 +79,7 @@
   Hi, I've been building and coding things for the web and devices for almost a
   decade now. Currently I'm working at
   <a href="https://getnacelle.com/" target="_blank">Nacelle</a>
-  where we're revolutionizing e-commerce.
+  where we're bringing JAMstack to eCommerce.
   <br />
   <br />
   This is my little corner of the internet.
