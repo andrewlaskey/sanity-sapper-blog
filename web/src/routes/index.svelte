@@ -27,7 +27,7 @@
           _type == "post" &&
           defined(slug.current) &&
           publishedAt < now() &&
-          category._ref in *[_type=="category" && title=="Work and Projects"]._id
+          category._ref in *[_type=="category" && title == "Work and Projects"]._id
         ][0...5] | order(publishedAt desc){
           ...,
           'category': category->title
@@ -80,9 +80,6 @@
   decade now. Currently I'm working at
   <a href="https://getnacelle.com/" target="_blank">Nacelle</a>
   where we're bringing JAMstack to eCommerce.
-  <br />
-  <br />
-  This is my little corner of the internet.
 </p>
 
 <h3>Shares</h3>

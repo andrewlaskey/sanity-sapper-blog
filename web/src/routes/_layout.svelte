@@ -31,6 +31,17 @@
     margin: 0 auto;
     max-width: 48em;
   }
+
+  @media only screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    header :global(.external-nav) {
+      padding-top: 1rem;
+    }
+  }
   main {
     position: relative;
     max-width: 48em;

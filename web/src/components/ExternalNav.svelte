@@ -25,7 +25,7 @@
   }
 </style>
 
-<nav>
+<nav class="external-nav">
   <ul>
     {#each links as link}
       <li>
