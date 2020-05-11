@@ -33,7 +33,7 @@
 </style>
 
 <svelte:head>
-  <title>Everything</title>
+  <title>Andrew Laskey | Work & Projects</title>
 </svelte:head>
 
 <h1 class="h2">Work and Projects</h1>

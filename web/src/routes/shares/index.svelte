@@ -80,7 +80,7 @@
 </style>
 
 <svelte:head>
-  <title>Everything</title>
+  <title>Andrew Laskey | Shares</title>
 </svelte:head>
 
 <h1 class="h2">Shares</h1>
